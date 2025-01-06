@@ -1,16 +1,14 @@
 ﻿# EasyHunyuanVideo
 
-**公開作業中**
+[Hunyuan Video](https://aivideo.hunyuan.tencent.com/) を簡単に試せる環境です。
 
-Geforce RTX 3060 12GB で [Hunyuan Video](https://aivideo.hunyuan.tencent.com/) を簡単に試せる環境です。
-
-- 簡単インストールでモデルや LoRA も一式ダウンロード
+- 簡単インストールで [Kijai 版](https://github.com/kijai/ComfyUI-HunyuanVideoWrapper) や [Native 版](https://comfyanonymous.github.io/ComfyUI_examples/hunyuan_video/) のモデルや LoRA も一式ダウンロード
 - [SageAttention](https://github.com/thu-ml/SageAttention), [FastVideo](https://github.com/hao-ai-lab/FastVideo), TeaChache の併用で Geforce RTX 3060 でも高速・省 VRAM 生成
 - 日本語プロンプトや LLM・TIPO プロンプト拡張に対応
 - アップスケール、フレーム補間、自動・手動モザイクに対応
 - MMAudio による音声生成に対応
 
-動作確認環境: NVIDIA Geforce 3060 12GB 以上搭載の Windows PC (RAM 64GB, ストレージ 100GB 程度)
+動作確認環境: NVIDIA Geforce 3060 12GB 搭載の Windows PC (RAM 64GB, ストレージ 100GB 程度)
 
 ## インストール
 
@@ -25,7 +23,6 @@ Geforce RTX 3060 12GB で [Hunyuan Video](https://aivideo.hunyuan.tencent.com/) 
 1. `Download.bat` を実行して、モデルや LoRA をダウンロードします。
 	- **ダウンロードには Civitai の API Key が必要です。**  
 **[Civitai](https://civitai.com) にログインして [アカウント設定](https://civitai.com/user/account) から API Key をコピー＆ペーストしてください。**
-
 
 **`ComfyUi.bat` で EasyHunyuanVideo が起動し、`Update.bat` で更新できます。**
 
@@ -62,10 +59,7 @@ Geforce RTX 3060 12GB で [Hunyuan Video](https://aivideo.hunyuan.tencent.com/) 
 	`width` や `height` を下げた場合は `flow_shift` も下げたほうがよいかもしれません。
 - `HunyuanVideo Decode` ノードで止まる場合は、`spatial_tile_sample_min_size` を `128` にします。
 - `Easy/20_HunyuanVideo_Native` ワークフローを使用すると、生成は遅くなりますが低 VRAM でも生成できる場合があります。
-	- [Geforce GTX 1660 Ti (VRAM 6GB) でも一応動作しました](https://raw.githubusercontent.com/wiki/Zuntan03/EasyHunyuanVideo/Setup/GeforceGTX1660Ti.mp4)。
-![](https://yyy.wpx.jp/EasyHunyuanVideo/202501/GeforceGTX1660Ti.mp4)
-
-[mp4 test](https://yyy.wpx.jp/EasyHunyuanVideo/202501/GeforceGTX1660Ti.mp4)
+	- [Geforce GTX 1660 Ti (VRAM 6GB) でも一応動作しました。](https://yyy.wpx.jp/EasyHunyuanVideo/202501/GeforceGTX1660Ti.mp4)
 
 ### `Easy/10_HunyuanVideo_Kijai` ワークフロー
 
@@ -74,7 +68,7 @@ Geforce RTX 3060 12GB で [Hunyuan Video](https://aivideo.hunyuan.tencent.com/) 
 	- `TIPO` を有効にすると、少量のプロンプトからプロンプトのバリエーションを生成できます。
 - LoRA は `ControlPanel` で LoRA 1-5 を有効にして、LoRA を選択してトリガーワードを指定します。
 	- 左にある通常の LoRA 読み込みノードで LoRA を選択し、右クリックから `View Lora Info...` でトリガーワードや Civitai ページを確認できます。
-	- **[Civitai の LoRA 作者プロンプト](https://civitai.com/search/models?baseModel=Hunyuan%20Video&sortBy=models_v9%3AcreatedAt%3Adesc)をぜひ参考にしてください（画像生成よりシビアです）。**
+	- **[Civitai の LoRA 作者のプロンプト](https://civitai.com/search/models?baseModel=Hunyuan%20Video&sortBy=models_v9%3AcreatedAt%3Adesc)をぜひ参考にしてください（画像生成よりシビアです）。**
 	- LoRA の影響が強すぎる場合に、`Get_LbwDoble` と LoRA ノードを繋ぐと影響を軽減できる場合があります。
 - `LLM Prompt` では日本語プロンプトを英訳したり、さらにプロンプトの続きを生成したりできます。
 - `TranslateJa` を有効にすると、生成用プロンプトの日本語訳を確認できます。
@@ -85,3 +79,8 @@ Geforce RTX 3060 12GB で [Hunyuan Video](https://aivideo.hunyuan.tencent.com/) 
 	- num＿frames は 73（3秒）～ 145 (6秒) ぐらいがオススメです。
 	- 解像度や LoRA との相性？で、flow_shift を `6.0` ~ `20.0` ぐらいに変更すると、結果が良くなる場合があります。
 
+## 最近の更新履歴
+
+### 2025/01/07
+
+- EasyHunyuanVideo を公開しました。
