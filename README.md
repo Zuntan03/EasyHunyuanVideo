@@ -10,7 +10,7 @@ Geforce RTX 3060 12GB で [Hunyuan Video](https://aivideo.hunyuan.tencent.com/) 
 - アップスケール、フレーム補間、自動・手動モザイクに対応
 - MMAudio による音声生成に対応
 
-動作確認環境: NVIDIA Geforce 3060 12GB 以上搭載の Windows PC (RAM 64GB, ストレージ 100GB 程度, 成人向け)
+動作確認環境: NVIDIA Geforce 3060 12GB 以上搭載の Windows PC (RAM 64GB, ストレージ 100GB 程度)
 
 ## インストール
 
@@ -61,6 +61,7 @@ Geforce RTX 3060 12GB で [Hunyuan Video](https://aivideo.hunyuan.tencent.com/) 
 - `HunyuanVideo Sampler` ノードで `width`, `height`(384 x 512など), `num_frames`（73 や 97 など） を下げます。  
 	`width` や `height` を下げた場合は `flow_shift` も下げたほうがよいかもしれません。
 - `HunyuanVideo Decode` ノードで止まる場合は、`spatial_tile_sample_min_size` を `128` にします。
+- `Easy/20_HunyuanVideo_Native` ワークフローを使用すると、生成は遅くなりますが低 VRAM でも動作する場合があります。
 
 ### `Easy/10_HunyuanVideo_Kijai` ワークフロー
 

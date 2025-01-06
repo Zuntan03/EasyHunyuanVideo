@@ -66,6 +66,17 @@ for /d %%d in ("%~dp0\*") do (
 	pause & exit /b 1
 )
 
+echo "未成年の方は利用できません。成人ですか？ [y/n]"
+echo.
+echo "Are you an adult? [y/n]"
+set /p IS_ADULT_YES_OR_NO=
+if /i not "%IS_ADULT_YES_OR_NO%" == "y" (
+	echo "未成年の方は利用できません。"
+	echo.
+	echo "You cannot use it if you are a minor."
+	pause & exit /b 1
+)
+
 @REM echo "未成年の方は利用できません。"
 @REM echo "動作に必要なモデルなどをダウンロードします。よろしいですか？ [y/n]（空欄なら y）"
 @REM echo.
