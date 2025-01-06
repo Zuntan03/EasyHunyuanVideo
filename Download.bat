@@ -2,7 +2,7 @@
 chcp 65001 > NUL
 
 set EASY_TOOLS=%~dp0EasyTools
-set RECURSIVE_BAT_CALL=%EASY_TOOLS%\Bat\RecursiveBatCall.bat
+set RECURSIVE_BAT_CALL=%EASY_TOOLS%\Bat\RecursiveBatCall_NoErrorCheck.bat
 
 call %EASY_TOOLS%\Civitai\Civitai_ApiKey.bat
 if %ERRORLEVEL% neq 0 ( exit /b 1 )

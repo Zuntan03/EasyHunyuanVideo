@@ -28,4 +28,3 @@ if %ERRORLEVEL% neq 0 ( exit /b 1 )
 
 if /i "%DOWNLOAD_MDOEL_YES_OR_NO%" == "n" ( exit /b 0 )
 call %~dp0Download.bat
-if %ERRORLEVEL% neq 0 ( exit /b 1 )

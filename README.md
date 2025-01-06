@@ -44,8 +44,8 @@ Geforce RTX 3060 12GB で [Hunyuan Video](https://aivideo.hunyuan.tencent.com/) 
 
 1. `ComfyUi.bat` を実行するとブラウザで [ComfyUI](https://www.comfy.org/) が起動します。
 2. `Sample/` から好みの `*.png` 画像を選んで、ComfyUI にドラッグ＆ドロップします。
-3. 画面右上の `実行` で動画の生成を開始します。
-	- プロンプト入力欄左側の `Seed` ノードで `Randomize Each Time` すると、
+3. `実行` で動画の生成を開始します。**初回はモデルの追加ダウンロードで時間が掛かります。**
+	- プロンプト入力欄左側の `Seed` ノードで `Randomize Each Time` すると、バリエーションを生成できます。
 4. 生成した動画は `Output/` にあります。
 	- `*.mp4` は通常の動画で、`*.webp` は加工用の劣化しない動画（ただし大きくて重い）です。`*.png` はワークフロー保存用の画像です。
 5. 気に入った動画が生成できたら、左側ツールバーの `📂` から `Easy/50_Upscale.json` ワークフローを開きます。
@@ -53,6 +53,14 @@ Geforce RTX 3060 12GB で [Hunyuan Video](https://aivideo.hunyuan.tencent.com/) 
 6. 同様に `Easy/60_Interpolate` で、滑らかにした `*.mp4` 動画を生成します。
 7. 最後に `Easy/70_MMAudio` で滑らかにした `*.mp4` を読み込んで音声を生成します。
 	- `Seed` 違いの生成や、プロンプトの工夫で当たり音声を引いてください。
+
+### VRAM 不足 (CudaOutOfMemory) 対策
+
+- VRAM 不足のエラーの後に、そのまま再度 `実行` すると正常に動作する場合があります。
+- 上部メニューの `Manager` の右にある `Unload Models` した後に `実行` すると正常に動作する場合があります。
+- `HunyuanVideo Sampler` ノードで `width`, `height`(384 x 512など), `num_frames`（73 や 97 など） を下げます。  
+	`width` や `height` を下げた場合は `flow_shift` も下げたほうがよいかもしれません。
+- `HunyuanVideo Decode` ノードで止まる場合は、`spatial_tile_sample_min_size` を `128` にします。
 
 ### `Easy/10_HunyuanVideo_Kijai` ワークフロー
 
@@ -72,10 +80,3 @@ Geforce RTX 3060 12GB で [Hunyuan Video](https://aivideo.hunyuan.tencent.com/) 
 	- num＿frames は 73（3秒）～ 145 (6秒) ぐらいがオススメです。
 	- 解像度や LoRA との相性？で、flow_shift を `6.0` ~ `20.0` ぐらいに変更すると、結果が良くなる場合があります。
 
-### VRAM 不足 (CudaOutOfMemory) 対策
-
-- VRAM 不足のエラーの後に、そのまま再度 `実行` すると正常に動作する場合があります。
-- 上部メニューの `Manager` の右にある `Unload Models` した後に `実行` すると正常に動作する場合があります。
-- `HunyuanVideo Sampler` ノードで `width`, `height`(384 x 512など), `num_frames`（73 や 97 など） を下げます。  
-	`width` や `height` を下げた場合は `flow_shift` も下げたほうがよいかもしれません。
-- `HunyuanVideo Decode` ノードで止まる場合は、`spatial_tile_sample_min_size` を `128` にします。
