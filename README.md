@@ -63,7 +63,9 @@ Geforce RTX 3060 12GB で [Hunyuan Video](https://aivideo.hunyuan.tencent.com/) 
 - `HunyuanVideo Decode` ノードで止まる場合は、`spatial_tile_sample_min_size` を `128` にします。
 - `Easy/20_HunyuanVideo_Native` ワークフローを使用すると、生成は遅くなりますが低 VRAM でも生成できる場合があります。
 	- [Geforce GTX 1660 Ti (VRAM 6GB) でも一応動作しました](https://raw.githubusercontent.com/wiki/Zuntan03/EasyHunyuanVideo/Setup/GeforceGTX1660Ti.mp4)。
-![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyHunyuanVideo/Setup/GeforceGTX1660Ti.mp4)
+![](https://yyy.wpx.jp/EasyHunyuanVideo/202501/GeforceGTX1660Ti.mp4)
+
+[mp4 test](https://yyy.wpx.jp/EasyHunyuanVideo/202501/GeforceGTX1660Ti.mp4)
 
 ### `Easy/10_HunyuanVideo_Kijai` ワークフロー
 
