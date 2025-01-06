@@ -14,12 +14,20 @@ echo.
 echo git pull https://github.com/Zuntan03/EasyTools
 git pull
 if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
+
+echo git reset --hard origin/main
+git reset --hard origin/main
+if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 popd
 
 pushd %~dp0
 echo.
 echo git pull https://github.com/Zuntan03/EasyHunyuanVideo
 git pull
+if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
+
+echo git reset --hard origin/main
+git reset --hard origin/main
 if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 popd
 
