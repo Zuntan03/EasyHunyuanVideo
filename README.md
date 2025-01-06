@@ -58,7 +58,7 @@
 - `HunyuanVideo Sampler` ノードで `width`, `height`(384 x 512など), `num_frames`（73 や 97 など） を下げます。  
 	`width` や `height` を下げた場合は `flow_shift` も下げたほうがよいかもしれません。
 - `HunyuanVideo Decode` ノードで止まる場合は、`spatial_tile_sample_min_size` を `128` にします。
-- `Easy/20_HunyuanVideo_Native` ワークフローを使用すると、生成は遅くなりますが低 VRAM でも生成できる場合があります。
+- `Easy/20_HunyuanVideo_Native` ワークフローを使用すると、生成は遅くなりますが低 VRAM や低 RAM でも生成できる場合があります。
 	- [Geforce GTX 1660 Ti (VRAM 6GB) でも一応動作しました。](https://yyy.wpx.jp/EasyHunyuanVideo/202501/GeforceGTX1660Ti.mp4)
 
 ### `Easy/10_HunyuanVideo_Kijai` ワークフロー
