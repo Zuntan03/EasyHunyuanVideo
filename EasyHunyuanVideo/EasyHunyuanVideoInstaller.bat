@@ -72,9 +72,6 @@ for /d %%d in ("%~dp0\*") do (
 @REM echo "Download Model etc. Are you sure? [y/n] (default: y)"
 @REM set /p DOWNLOAD_MDOEL_YES_OR_NO=
 
-@REM TODO: Set API Key
-@REM if /i NOT "%DOWNLOAD_MDOEL_YES_OR_NO%" == "n"
-
 @REM ---- ここから Git/Get_SetPath.bat と同期 ----
 where /Q git
 if %ERRORLEVEL% equ 0 ( goto :EASY_GIT_FOUND )

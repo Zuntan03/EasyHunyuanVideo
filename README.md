@@ -10,19 +10,22 @@ Geforce RTX 3060 12GB で [Hunyuan Video](https://aivideo.hunyuan.tencent.com/) 
 - アップスケール、フレーム補間、自動・手動モザイクに対応
 - MMAudio による音声生成に対応
 
-動作確認環境: NVIDIA Geforce 3060 12GB 以上搭載の Windows PC (RAM 64GB, ストレージ 100GB 程度)
+動作確認環境: NVIDIA Geforce 3060 12GB 以上搭載の Windows PC (RAM 64GB, ストレージ 100GB 程度, 成人向け)
 
 ## インストール
 
 1. [EasyHunyuanVideoInstaller.bat](https://github.com/Zuntan03/EasyHunyuanVideo/raw/main/EasyHunyuanVideo/EasyHunyuanVideoInstaller.bat?ver=0) を右クリックから保存します。
 2. インストール先の空フォルダを `C:/EasyHunyuan/` などの浅いパスに用意して、ここに `EasyHunyuanVideoInstaller.bat` を移動して実行します。
 	- **`WindowsによってPCが保護されました` と表示されたら、`詳細表示` から `実行` します。**
-3. インストール先の `EasyHunyuanVideo/vs_BuildTools.exe` を実行して、Microsoft の [Visual Studio Build Tools](https://learn.microsoft.com/ja-jp/visualstudio/install/use-command-line-parameters-to-install-visual-studio) の **`C++ によるデスクトップ開発` をインストールします。**
-4. `EasyHunyuanVideo/cuda_12.6.3_windows_network.exe` を実行して、NVIDIA の [CUDA Toolkit](https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=11&target_type=exe_network) をインストールします。
-	- CUDA Toolkit に対応したドライバや Geforce Experience も同時にインストールされます。Geforce Experience が不要な場合は、`インストールオプション` の `カスタム` から変更します。
-5. `Download.bat` を実行して、モデルや LoRA をダウンロードします。
-	- ダウンロードには Civitai の API Key が必要です。  
-Civitai にログインして [アカウント設定](ttps://civitai.com/user/account) から API Key をコピー＆ペーストしてください。
+3. インストール先の `EasyHunyuanVideo/vs_BuildTools.exe` を実行して、Microsoft の [Visual Studio Build Tools](https://learn.microsoft.com/ja-jp/visualstudio/install/use-command-line-parameters-to-install-visual-studio) の **`C++ によるデスクトップ開発` をインストールします。**  
+![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyHunyuanVideo/Setup/VsBuildTools_Cpp.png)
+1. `EasyHunyuanVideo/cuda_12.6.3_windows_network.exe` を実行して、NVIDIA の [CUDA Toolkit](https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=11&target_type=exe_network) をインストールします。
+	- CUDA Toolkit に対応したドライバや Geforce Experience も同時にインストールされます。Geforce Experience が不要な場合は、`インストールオプション` の `カスタム` から変更します。  
+![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyHunyuanVideo/Setup/CudaToolkit.webp)
+1. `Download.bat` を実行して、モデルや LoRA をダウンロードします。
+	- **ダウンロードには Civitai の API Key が必要です。**  
+**[Civitai](https://civitai.com) にログインして [アカウント設定](https://civitai.com/user/account) から API Key をコピー＆ペーストしてください。**
+
 
 **`ComfyUi.bat` で EasyHunyuanVideo が起動し、`Update.bat` で更新できます。**
 
@@ -51,7 +54,7 @@ Civitai にログインして [アカウント設定](ttps://civitai.com/user/ac
 7. 最後に `Easy/70_MMAudio` で滑らかにした `*.mp4` を読み込んで音声を生成します。
 	- `Seed` 違いの生成や、プロンプトの工夫で当たり音声を引いてください。
 
-### 10_HunyuanVideo_Kijai ワークフロー
+### `Easy/10_HunyuanVideo_Kijai` ワークフロー
 
 - プロンプト入力欄左の `ControlPanel` でいろいろな機能の有効無効を切り替えられます。
 - 通常のプロンプト入力欄である `Prompt` では、`Dynamic Prompt` を使用できます。
