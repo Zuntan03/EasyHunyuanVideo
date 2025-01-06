@@ -66,11 +66,14 @@ for /d %%d in ("%~dp0\*") do (
 	pause & exit /b 1
 )
 
-echo "未成年の方は利用できません。"
-echo "動作に必要なモデルなどをダウンロードします。よろしいですか？ [y/n]（空欄なら y）"
-echo.
-echo "Download Model etc. Are you sure? [y/n] (default: y)"
-set /p DOWNLOAD_MDOEL_YES_OR_NO=
+@REM echo "未成年の方は利用できません。"
+@REM echo "動作に必要なモデルなどをダウンロードします。よろしいですか？ [y/n]（空欄なら y）"
+@REM echo.
+@REM echo "Download Model etc. Are you sure? [y/n] (default: y)"
+@REM set /p DOWNLOAD_MDOEL_YES_OR_NO=
+
+@REM TODO: Set API Key
+@REM if /i NOT "%DOWNLOAD_MDOEL_YES_OR_NO%" == "n"
 
 @REM ---- ここから Git/Get_SetPath.bat と同期 ----
 where /Q git
@@ -89,7 +92,7 @@ if not exist %PORTABLE_GIT_BIN%\ (
 	%CURL_CMD% -o %EASY_GIT_DIR%\env\PortableGit.7z.exe https://github.com/git-for-windows/git/releases/download/v%PORTABLE_GIT_VERSION%.windows.1/PortableGit-%PORTABLE_GIT_VERSION%-64-bit.7z.exe
 	if !ERRORLEVEL! neq 0 ( pause & endlocal & exit /b 1 )
 
-	start "" %PS_CMD% -Command "Start-Sleep -Seconds 2; $title='Portable Git for Windows 64-bit'; $window=Get-Process | Where-Object { $_.MainWindowTitle -eq $title } | Select-Object -First 1; if ($window -ne $null) { [void][System.Reflection.Assembly]::LoadWithPartialName('Microsoft.VisualBasic'); [Microsoft.VisualBasic.Interaction]::AppActivate($window.Id); Start-Sleep -Seconds 1; Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait('{ENTER}') }"
+	start "" %PS_CMD% -Command "Start-Sleep -Seconds 5; $title='Portable Git for Windows 64-bit'; $window=Get-Process | Where-Object { $_.MainWindowTitle -eq $title } | Select-Object -First 1; if ($window -ne $null) { [void][System.Reflection.Assembly]::LoadWithPartialName('Microsoft.VisualBasic'); [Microsoft.VisualBasic.Interaction]::AppActivate($window.Id); Start-Sleep -Seconds 1; Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait('{ENTER}') }"
 
 	echo "操作せずに、そのまま Portable Git for Windows をインストールしてください。"
 	echo.
@@ -124,9 +127,9 @@ if %ERRORLEVEL% neq 0 ( exit /b 1 )
 call %PROJECT_SETUP_BAT%
 if %ERRORLEVEL% neq 0 ( exit /b 1 )
 
-if /i "%DOWNLOAD_MDOEL_YES_OR_NO%" == "n" ( goto :FINALIZE )
-call %PROJECT_MODEL_DOWNLOAD_BAT%
-if %ERRORLEVEL% neq 0 ( exit /b 1 )
+@REM if /i "%DOWNLOAD_MDOEL_YES_OR_NO%" == "n" ( goto :FINALIZE )
+@REM call %PROJECT_MODEL_DOWNLOAD_BAT%
+@REM if %ERRORLEVEL% neq 0 ( exit /b 1 )
 
 goto :FINALIZE
 

@@ -16,6 +16,7 @@ Geforce RTX 3060 12GB で [Hunyuan Video](https://aivideo.hunyuan.tencent.com/) 
 
 1. [EasyHunyuanVideoInstaller.bat](https://github.com/Zuntan03/EasyHunyuanVideo/raw/main/EasyHunyuanVideo/EasyHunyuanVideoInstaller.bat?ver=0) を右クリックから保存します。
 2. インストール先の空フォルダを `C:/EasyHunyuan/` などの浅いパスに用意して、ここに `EasyHunyuanVideoInstaller.bat` を移動して実行します。
+	- **`WindowsによってPCが保護されました` と表示されたら、`詳細表示` から `実行` します。**
 3. インストール先の `EasyHunyuanVideo/vs_BuildTools.exe` を実行して、Microsoft の [Visual Studio Build Tools](https://learn.microsoft.com/ja-jp/visualstudio/install/use-command-line-parameters-to-install-visual-studio) の **`C++ によるデスクトップ開発` をインストールします。**
 4. `EasyHunyuanVideo/cuda_12.6.3_windows_network.exe` を実行して、NVIDIA の [CUDA Toolkit](https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=11&target_type=exe_network) をインストールします。
 	- CUDA Toolkit に対応したドライバや Geforce Experience も同時にインストールされます。Geforce Experience が不要な場合は、`インストールオプション` の `カスタム` から変更します。
