@@ -38,8 +38,6 @@
 	- または、PC の管理者権限で `EasyTools/EnableLongPaths.bat` を実行してから再インストールします。
 - VPN を利用していると、インストールに失敗する場合があります。
 - プロキシ環境でインストールに失敗する場合は、[Git for Windows](https://gitforwindows.org/) と [Python 3.10.x](https://www.python.org/ftp/python/3.10.6/python-3.10.6-amd64.exe) に [パスを通してから](https://github.com/Zuntan03/SdWebUiTutorial/blob/main/_/doc/SdWebUiInstall/SdWebUiInstall.md#git-for-windows-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB) 再インストールします。
-- `clip-vit-large-patch14`, `llava_llama3_fp8_scaled`, `llava-llama-3-8b-text-encoder-tokenizer`, `TIPO-200M-ft_TIPO-200M-ft-F16`, `bigvgan_v2_44khz_128band_512x` 関連のエラーが出る場合は、各種ノードによる HuggingFace からのモデルダウンロードに何らかの理由で失敗しています。  
-ネットワーク環境や管理者権限をご確認ください。
 
 ## チュートリアル
 
@@ -102,4 +100,4 @@
 
 - EasyHunyuanVideo を公開しました。
 - サンプルのダウンロードの不具合を修正しました。
-- [Kijai 版](https://github.com/kijai/ComfyUI-HunyuanVideoWrapper) ノード
+- 各種ノードによる HuggingFace からのダウンロードに失敗する一部環境のために、`Download.bat` でダウンロードするファイルを増やしました。

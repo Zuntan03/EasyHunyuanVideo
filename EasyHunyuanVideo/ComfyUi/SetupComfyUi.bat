@@ -38,6 +38,8 @@ if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 @REM pip install -qq torchao==0.7.0
 @REM if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
+if not exist models\kgen\ ( mkdir models\kgen )
+if not exist models\LLM\ ( mkdir models\LLM )
 if not exist models\llm_gguf\ ( mkdir models\llm_gguf )
 if not exist models\mmaudio\ ( mkdir models\mmaudio )
 if not exist models\ultralytics\ ( mkdir models\ultralytics )
