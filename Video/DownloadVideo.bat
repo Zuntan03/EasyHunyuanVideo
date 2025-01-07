@@ -7,7 +7,7 @@ pushd %~dp0
 
 echo.
 echo %CURL_CMD% -O "https://yyy.wpx.jp/EasyHunyuanVideo/Sample/VideoList.txt"
-%CURL_CMD% -O "https://yyy.wpx.jp/EasyHunyuanVideo/Sample/VideoList.txt"
+%CURL_CMD% -O "https://yyy.wpx.jp/EasyHunyuanVideo/Sample/VideoList.txt&ver=0"
 if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
 for /f "tokens=*" %%f in (VideoList.txt) do (
