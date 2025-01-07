@@ -6,8 +6,8 @@ set ARIA_CMD=%EASY_TOOLS%\Download\Aria.bat
 pushd %~dp0
 
 echo.
-echo %CURL_CMD% --no-cache -O "https://yyy.wpx.jp/EasyHunyuanVideo/Sample/VideoList.txt"
-%CURL_CMD% --no-cache -O "https://yyy.wpx.jp/EasyHunyuanVideo/Sample/VideoList.txt"
+echo %CURL_CMD% -O "https://yyy.wpx.jp/EasyHunyuanVideo/Sample/VideoList.txt"
+%CURL_CMD% -O "https://yyy.wpx.jp/EasyHunyuanVideo/Sample/VideoList.txt"
 if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
 for /f "tokens=*" %%f in (VideoList.txt) do (
