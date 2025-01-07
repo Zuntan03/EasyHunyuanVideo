@@ -74,7 +74,7 @@
 	`width` や `height` を下げた場合は `flow_shift` も下げたほうがよいかもしれません。
 - `HunyuanVideo Decode` ノードで止まる場合は、`spatial_tile_sample_min_size` を `128` にします。
 - `Easy/20_HunyuanVideo_Native` ワークフローを使用すると、生成は遅くなりますが低 VRAM や低 RAM でも生成できる場合があります。
-	- [Geforce GTX 1660 Ti (VRAM 6GB) でも一応動作しました。](https://yyy.wpx.jp/EasyHunyuanVideo/202501/GeforceGTX1660Ti.mp4)
+	- [Geforce GTX 1660 Ti (VRAM 6GB, RAM 32G) でも一応動作しました。](https://yyy.wpx.jp/EasyHunyuanVideo/202501/GeforceGTX1660Ti.mp4)
 
 ### `Easy/10_HunyuanVideo_Kijai` ワークフロー
 
@@ -83,13 +83,14 @@
 	- `TIPO` を有効にすると、少量のプロンプトからプロンプトのバリエーションを生成できます。
 - LoRA は `ControlPanel` で LoRA 1-5 を有効にして、LoRA を選択してトリガーワードを指定します。
 	- 左にある通常の LoRA 読み込みノードで LoRA を選択し、右クリックから `View Lora Info...` でトリガーワードや Civitai ページを確認できます。  
-	**[Civitai の LoRA 作者のプロンプト](https://civitai.com/search/models?baseModel=Hunyuan%20Video&sortBy=models_v9%3AcreatedAt%3Adesc)をぜひ参考にしてください（画像生成よりシビアです）。**  
+	**[Civitai の LoRA 作者のプロンプト](https://civitai.com/search/models?baseModel=Hunyuan%20Video&sortBy=models_v9%3AcreatedAt%3Adesc)をぜひ参考にしてください（画像生成よりプロンプトがシビアです）。**  
 	![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyHunyuanVideo/Setup/LoraInfo.webp)
 	- LoRA の影響が強すぎる場合に、`Get_LbwDoble` と LoRA ノードを繋ぐと影響を軽減できる場合があります。
 - `LLM Prompt` では日本語プロンプトを英訳したり、さらにプロンプトの続きを生成したりできます。
 - `TranslateJa` を有効にすると、生成用プロンプトの日本語訳を確認できます。
 - `Shape Mosaic` では手動で指定した丸や四角のモザイクを、`Segm Mosaic` では自動検出でモザイクをかけられます。
 	- `*.webp` のロスレス出力を `40_Mosaic` ワークフローで読み込んで、後からモザイク処理をすることもできます。
+		- `*.webp` をネットで共有する場合は、`ロスレス` を `false` にしてください。
 	- `Upscale`, `Interpolate` も同様に、後から処理できます。
 - 動画の解像度や長さなどのパラメータは `HunyuanVideo Sampler` ノードで編集できます。
 	- num＿frames は 73（3秒）～ 145 (6秒) ぐらいがオススメです。
