@@ -1,5 +1,8 @@
 ﻿# EasyHunyuanVideo
 
+**公開したてで細々とした調整や不具合修正をしています。**  
+**`Update.bat` で問題が解決したり、このREADMEに重要なことが追記されたりしますので、ご注意ください。**
+
 [Hunyuan Video](https://aivideo.hunyuan.tencent.com/) を簡単に試せる環境です。
 
 - 簡単インストールで [Kijai 版](https://github.com/kijai/ComfyUI-HunyuanVideoWrapper) や [Native 版](https://comfyanonymous.github.io/ComfyUI_examples/hunyuan_video/) のモデルや LoRA も一式ダウンロード
@@ -43,7 +46,7 @@
 
 - `HunyuanVideo Model Loader` の `attention_mode` を `spda` にする。  
 ![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyHunyuanVideo/Setup/KijaiSpda.png)
-- ComfyUI ネイティブ版ワークフローの `Easy/20_HunyuanVideo_Native` を利用する。
+- ComfyUI ネイティブ版の `Easy/20_HunyuanVideo_Native` を利用する。
 ![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyHunyuanVideo/Setup/NativeWorkflow.png)
 
 ### 動画の生成
@@ -96,3 +99,4 @@
 ### 2025/01/07
 
 - EasyHunyuanVideo を公開しました。
+- サンプルのダウンロードの不具合を修正しました。
