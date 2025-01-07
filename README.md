@@ -38,6 +38,14 @@
 
 ## チュートリアル
 
+**チュートリアルは高速な [Kijai 版](https://github.com/kijai/ComfyUI-HunyuanVideoWrapper) で解説していますが、Kijai 版は環境依存がシビアです。**  
+動作しない場合は以下を試してみてください。
+
+- `HunyuanVideo Model Loader` の `attention_mode` を `spda` にする。  
+![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyHunyuanVideo/Setup/KijaiSpda.png)
+- ComfyUI ネイティブ版ワークフローの `Easy/20_HunyuanVideo_Native` を利用する。
+![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyHunyuanVideo/Setup/NativeWorkflow.png)
+
 ### 動画の生成
 
 1. `ComfyUi.bat` を実行するとブラウザで [ComfyUI](https://www.comfy.org/) が起動します。
