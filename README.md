@@ -84,7 +84,7 @@
 - LoRA は `ControlPanel` で LoRA 1-5 を有効にして、LoRA を選択してトリガーワードを指定します。
 	- 左にある通常の LoRA 読み込みノードで LoRA を選択し、右クリックから `View Lora Info...` でトリガーワードや Civitai ページを確認できます。  
 	**[Civitai の LoRA 作者のプロンプト](https://civitai.com/search/models?baseModel=Hunyuan%20Video&sortBy=models_v9%3AcreatedAt%3Adesc)をぜひ参考にしてください（画像生成よりシビアです）。**  
-	![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyHunyuanVideo/Setup/LoraInfo.png)
+	![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyHunyuanVideo/Setup/LoraInfo.webp)
 	- LoRA の影響が強すぎる場合に、`Get_LbwDoble` と LoRA ノードを繋ぐと影響を軽減できる場合があります。
 - `LLM Prompt` では日本語プロンプトを英訳したり、さらにプロンプトの続きを生成したりできます。
 - `TranslateJa` を有効にすると、生成用プロンプトの日本語訳を確認できます。
