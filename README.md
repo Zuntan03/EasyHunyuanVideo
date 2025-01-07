@@ -18,7 +18,8 @@
 3. インストール先の `EasyHunyuanVideo/vs_BuildTools.exe` を実行して、Microsoft の [Visual Studio Build Tools](https://learn.microsoft.com/ja-jp/visualstudio/install/use-command-line-parameters-to-install-visual-studio) の **`C++ によるデスクトップ開発` をインストールします。**  
 ![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyHunyuanVideo/Setup/VsBuildTools_Cpp.png)
 1. `EasyHunyuanVideo/cuda_12.6.3_windows_network.exe` を実行して、NVIDIA の [CUDA Toolkit](https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=11&target_type=exe_network) をインストールします。
-	- CUDA Toolkit に対応したドライバや Geforce Experience も同時にインストールされます。Geforce Experience が不要な場合は、`インストールオプション` の `カスタム` から変更します。  
+	- CUDA Toolkit に対応したドライバや Geforce Experience も同時にインストールされます。  
+	Geforce Experience が不要な場合は、`インストールオプション` の `カスタム` から変更します。  
 ![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyHunyuanVideo/Setup/CudaToolkit.webp)
 1. `Download.bat` を実行して、モデルや LoRA をダウンロードします。
 	- **ダウンロードには Civitai の API Key が必要です。**  
@@ -51,8 +52,8 @@
 7. 最後に `Easy/70_MMAudio` で滑らかにした `*.mp4` を読み込んで音声を生成します。
 	- `Seed` 違いの生成や、プロンプトの工夫で当たり音声を引いてください。
 
-**`Easy/` 以下のワークフローは更新 (`Update.bat`) で最新状態に戻ります。**  
-**編集を残したい場合は別名で保存してください。**
+**`Easy/` 以下のワークフローは更新 (`Update.bat`) で最新状態になります。**  
+**編集したワークフローを残したい場合は別名で保存してください。**
 
 ### VRAM 不足 (CudaOutOfMemory) 対策
 
