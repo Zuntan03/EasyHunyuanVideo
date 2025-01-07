@@ -58,12 +58,14 @@ for %%f in ("%~dp0\*") do (
 )
 
 for /d %%d in ("%~dp0\*") do (
-	echo "[ERROR] インストール先のフォルダに他のフォルダが存在します。"
-	echo "インストール先のフォルダには %~nx0 しか存在しないようにしてください。"
-	echo.
-	echo "[ERROR] There are other folders in the installation folder."
-	echo "There should be only %~nx0 in the installation folder."
-	pause & exit /b 1
+	if not "%%~nxd"=="EasyTools" (
+		echo "[ERROR] インストール先のフォルダに他のフォルダが存在します。"
+		echo "インストール先のフォルダには %~nx0 しか存在しないようにしてください。"
+		echo.
+		echo "[ERROR] There are other folders in the installation folder."
+		echo "There should be only %~nx0 in the installation folder."
+		pause & exit /b 1
+	)
 )
 
 echo "未成年の方は利用できません。成人ですか？ [y/n]"
@@ -100,7 +102,7 @@ if not exist %PORTABLE_GIT_BIN%\ (
 	%CURL_CMD% -o %EASY_GIT_DIR%\env\PortableGit.7z.exe https://github.com/git-for-windows/git/releases/download/v%PORTABLE_GIT_VERSION%.windows.1/PortableGit-%PORTABLE_GIT_VERSION%-64-bit.7z.exe
 	if !ERRORLEVEL! neq 0 ( pause & endlocal & exit /b 1 )
 
-	start "" %PS_CMD% -Command "Start-Sleep -Seconds 4; $title='Portable Git for Windows 64-bit'; $window=Get-Process | Where-Object { $_.MainWindowTitle -eq $title } | Select-Object -First 1; if ($window -ne $null) { [void][System.Reflection.Assembly]::LoadWithPartialName('Microsoft.VisualBasic'); [Microsoft.VisualBasic.Interaction]::AppActivate($window.Id); Start-Sleep -Seconds 1; Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait('{ENTER}') }"
+	start "" %PS_CMD% -Command "Start-Sleep -Seconds 5; $title='Portable Git for Windows 64-bit'; $window=Get-Process | Where-Object { $_.MainWindowTitle -eq $title } | Select-Object -First 1; if ($window -ne $null) { [void][System.Reflection.Assembly]::LoadWithPartialName('Microsoft.VisualBasic'); [Microsoft.VisualBasic.Interaction]::AppActivate($window.Id); Start-Sleep -Seconds 1; Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.SendKeys]::SendWait('{ENTER}') }"
 
 	echo "操作せずに、そのまま Portable Git for Windows をインストールしてください。"
 	echo.
