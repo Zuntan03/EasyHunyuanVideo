@@ -24,7 +24,8 @@
 	- **ダウンロードには Civitai の API Key が必要です。**  
 **[Civitai](https://civitai.com) にログインして [アカウント設定](https://civitai.com/user/account) から API Key をコピー＆ペーストしてください。**
 
-**`ComfyUi.bat` で EasyHunyuanVideo が起動し、`Update.bat` で更新できます。**
+**`ComfyUi.bat` で EasyHunyuanVideo が起動し、`Update.bat` で更新できます。**  
+**`Sample/DownloadSample.bat` や `Video/DownloadVideo.bat` でサンプルや参考動画だけを更新できます。**
 
 ### インストールのトラブルシューティング
 
