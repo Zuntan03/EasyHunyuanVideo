@@ -41,13 +41,14 @@
 
 ## チュートリアル
 
-**チュートリアルは高速な [Kijai 版](https://github.com/kijai/ComfyUI-HunyuanVideoWrapper) で解説していますが、Kijai 版は環境依存がシビアです。**  
+**チュートリアルは高速な [Kijai 版](https://github.com/kijai/ComfyUI-HunyuanVideoWrapper) で解説していますが、Kijai 版は動作環境がシビアです。**  
 動作しない場合は以下を試してみてください。
 
 - `HunyuanVideo Model Loader` の `attention_mode` を `spda` にする。  
 ![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyHunyuanVideo/Setup/KijaiSpda.png)
 - ComfyUI ネイティブ版の `Easy/20_HunyuanVideo_Native` を利用する。
 ![](https://raw.githubusercontent.com/wiki/Zuntan03/EasyHunyuanVideo/Setup/NativeWorkflow.png)
+	- [Geforce GTX 1660 Ti (VRAM 6GB, RAM 16GB) でも一応動作しました。](https://yyy.wpx.jp/EasyHunyuanVideo/202501/GeforceGTX1660Ti.mp4)
 
 ### 動画の生成
 
@@ -74,7 +75,7 @@
 	`width` や `height` を下げた場合は `flow_shift` も下げたほうがよいかもしれません。
 - `HunyuanVideo Decode` ノードで止まる場合は、`spatial_tile_sample_min_size` を `128` にします。
 - `Easy/20_HunyuanVideo_Native` ワークフローを使用すると、生成は遅くなりますが低 VRAM や低 RAM でも生成できる場合があります。
-	- [Geforce GTX 1660 Ti (VRAM 6GB, RAM 16G) でも一応動作しました。](https://yyy.wpx.jp/EasyHunyuanVideo/202501/GeforceGTX1660Ti.mp4)
+	- [Geforce GTX 1660 Ti (VRAM 6GB, RAM 16GB) でも一応動作しました。](https://yyy.wpx.jp/EasyHunyuanVideo/202501/GeforceGTX1660Ti.mp4)
 
 ### `Easy/10_HunyuanVideo_Kijai` ワークフロー
 
