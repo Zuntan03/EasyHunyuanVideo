@@ -52,7 +52,7 @@
 ### 動画の生成
 
 1. `ComfyUi.bat` を実行するとブラウザで [ComfyUI](https://www.comfy.org/) が起動します。
-2. `Sample/` から好みの `*.png` 画像を選んで、ComfyUI にドラッグ＆ドロップします。
+2. インストール先の `Sample/` から好みの `*.png` 画像を選んで、ComfyUI にドラッグ＆ドロップします。
 3. `実行` で動画の生成を開始します。**初回はモデルの追加ダウンロードで時間が掛かります。**
 	- プロンプト入力欄左側の `Seed` ノードで `Randomize Each Time` すると、バリエーションを生成できます。
 4. 生成した動画は `Output/` にあります。
@@ -97,6 +97,12 @@
 	- 解像度や LoRA との相性？で、flow_shift を `6.0` ~ `20.0` ぐらいに変更すると、結果が良くなる場合があります。
 
 ## 最近の更新履歴
+
+### 2025/01/08
+
+- `Easy/20_HunyuanVideo_Native` ワークフローで [TeaChache](https://github.com/TTPlanetPig/Comfyui_TTP_Toolset) による高速化に対応しました。
+	- [手元では生成時間が 75% 程度になっています](https://yyy.wpx.jp/EasyHunyuanVideo/202501/NativeTeaChache.mp4)。
+- LoRA を 8 種追加しました。
 
 ### 2025/01/07
 

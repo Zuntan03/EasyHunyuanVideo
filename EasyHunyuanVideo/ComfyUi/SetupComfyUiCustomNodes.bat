@@ -21,6 +21,10 @@ if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 call :GITHUB_HASH_REQUIREMENTS SeargeDP ComfyUI_Searge_LLM main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
+@REM https://github.com/TTPlanetPig/Comfyui_TTP_Toolset
+call :GITHUB_HASH_REQUIREMENTS TTPlanetPig Comfyui_TTP_Toolset main
+if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
+
 @REM https://github.com/pythongosssss/ComfyUI-Custom-Scripts
 call :GITHUB_HASH_REQUIREMENTS pythongosssss ComfyUI-Custom-Scripts main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
@@ -73,16 +77,16 @@ if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-KJNodes main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
-@REM https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite
-call :GITHUB_HASH_REQUIREMENTS Kosinkadink ComfyUI-VideoHelperSuite main
-if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
-
 @REM https://github.com/ltdrdata/ComfyUI-Manager
 call :GITHUB_TAG_REQUIREMENTS ltdrdata ComfyUI-Manager main 2.55.5
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/kijai/ComfyUI-MMAudio
 call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-MMAudio main
+if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
+
+@REM https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite
+call :GITHUB_HASH_REQUIREMENTS Kosinkadink ComfyUI-VideoHelperSuite main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/rgthree/rgthree-comfy
