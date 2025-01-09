@@ -99,6 +99,13 @@
 
 ## 最近の更新履歴
 
+### 2025/01/09
+
+- `Easy/20_HunyuanVideo_Native` ワークフローに [First Block Cache](https://github.com/TTPlanetPig/Comfyui_TTP_Toolset) のノードを追加しました。
+- ComfyUI の起動時に `--use-sage-attention` オプションを追加する `ComfyUi_SageAttention.bat` を追加しました。
+- `Easy/` のワークフローで webp 保存のロスレスを無効にしました。
+- [アンインストール](https://github.com/Zuntan03/EasyHunyuanVideo?tab=readme-ov-file#%E3%82%A2%E3%83%B3%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB) について追記しました。
+
 ### 2025/01/08
 
 - `Easy/20_HunyuanVideo_Native` ワークフローで [TeaChache](https://github.com/TTPlanetPig/Comfyui_TTP_Toolset) による高速化に対応しました。
@@ -115,8 +122,9 @@
 
 - インストール先のフォルダを削除します。
 	- 容量の多くをインストール先のフォルダが占めていますので、これでアンインストール完了とするのがオススメです。
-- Microsoft の Visual Studio Build Tools と CUDA Toolkit は Windows の `アプリ` - `インストールされているアプリ` からアンインストールできます。
+- Visual Studio Build Tools と CUDA Toolkit は Windows の `アプリ` - `インストールされているアプリ` からアンインストールできます。
 	- ただし、CUDA Toolkit といっしょにインストールされる `NVIDIA グラフィックス ドライバー`、`NVIDIA オーディオ ドライバー`、`PhysX システム ソフトウェア` あたりはアンインストールすると PC が正常に動作しなくなる可能性があります。
+	- Visual Studio Build Tools のアンインストールで問題が起こる可能性は低い想定です。
 
 ## ライセンス
 

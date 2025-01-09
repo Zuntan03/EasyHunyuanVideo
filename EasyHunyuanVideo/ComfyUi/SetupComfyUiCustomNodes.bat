@@ -89,6 +89,10 @@ if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 call :GITHUB_HASH_REQUIREMENTS Kosinkadink ComfyUI-VideoHelperSuite main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
+@REM https://github.com/chengzeyi/Comfy-WaveSpeed
+call :GITHUB_HASH_REQUIREMENTS chengzeyi Comfy-WaveSpeed main
+if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
+
 @REM https://github.com/rgthree/rgthree-comfy
 call :GITHUB_HASH_REQUIREMENTS rgthree rgthree-comfy main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
