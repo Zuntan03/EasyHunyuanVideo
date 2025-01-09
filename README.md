@@ -104,6 +104,7 @@
 - `Easy/20_HunyuanVideo_Native` ワークフローに [First Block Cache](https://github.com/TTPlanetPig/Comfyui_TTP_Toolset) のノードを追加しました。
 - ComfyUI の起動時に `--use-sage-attention` オプションを追加する `ComfyUi_SageAttention.bat` を追加しました。
 - `Easy/` のワークフローで webp 保存のロスレスを無効にしました。
+- `ComfyUI/user/default/workflows` へのリンクを `Workflow/` に作成しました。
 - [アンインストール](https://github.com/Zuntan03/EasyHunyuanVideo?tab=readme-ov-file#%E3%82%A2%E3%83%B3%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB) について追記しました。
 
 ### 2025/01/08

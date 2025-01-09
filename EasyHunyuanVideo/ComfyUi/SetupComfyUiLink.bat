@@ -15,4 +15,7 @@ if not exist user\default\workflows\ ( mkdir user\default\workflows )
 call %JUNCTION% user\default\workflows\Easy ..\EasyHunyuanVideo\ComfyUi\Workflow
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
+call %JUNCTION% ..\Workflow user\default\workflows
+if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
+
 popd rem %~dp0..\..\ComfyUI
