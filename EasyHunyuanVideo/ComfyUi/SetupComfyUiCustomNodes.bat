@@ -85,12 +85,20 @@ if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-MMAudio main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
+@REM https://github.com/SeanScripts/ComfyUI-Unload-Model
+call :GITHUB_HASH_REQUIREMENTS SeanScripts ComfyUI-Unload-Model main
+if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
+
 @REM https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite
 call :GITHUB_HASH_REQUIREMENTS Kosinkadink ComfyUI-VideoHelperSuite main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/chengzeyi/Comfy-WaveSpeed
 call :GITHUB_HASH_REQUIREMENTS chengzeyi Comfy-WaveSpeed main
+if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
+
+@REM https://github.com/pythongosssss/ComfyUI-WD14-Tagger
+call :GITHUB_HASH_REQUIREMENTS pythongosssss ComfyUI-WD14-Tagger main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/rgthree/rgthree-comfy

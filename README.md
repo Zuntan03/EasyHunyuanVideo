@@ -101,6 +101,12 @@
 
 ### 2025/01/09
 
+- Python がインストールされていない環境で、Kijai 版ワークフローが動作しない不具合を修正しました。
+- サンプルを 1 種追加しました。
+- LoRA を 4 種追加しました。
+
+### 2025/01/09
+
 - `Easy/20_HunyuanVideo_Native` ワークフローに [First Block Cache](https://github.com/TTPlanetPig/Comfyui_TTP_Toolset) のノードを追加しました。
 - ComfyUI の起動時に `--use-sage-attention` オプションを追加する `ComfyUi_SageAttention.bat` を追加しました。
 - `Easy/` のワークフローで webp 保存のロスレスを無効にしました。
@@ -129,4 +135,5 @@
 
 ## ライセンス
 
-このリポジトリの内容は [MIT License](./LICENSE.txt) です。
+このリポジトリの内容は [MIT License](./LICENSE.txt) です。  
+別途ライセンスファイルがあるフォルダ以下は、そのライセンスです。
