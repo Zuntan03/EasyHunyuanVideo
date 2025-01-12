@@ -107,6 +107,7 @@
 
 - [NoobAI Epsilon Prediction v1.1](https://huggingface.co/Laxhar/noobai-XL-1.1) と [ControlNet Tile](https://huggingface.co/Eugeoter/noob-sdxl-controlnet-tile) で、動画を詳細にする `Easy/50_Refine_NoobE` と `Easy/60_Detail_NoobE` のワークフローを追加しました。
 	- フレーム間のちらつきは `Tile ControlNet` の `強度` を上げたり、`Kサンプラー` の `ノイズ除去` を下げたりして抑え、フレーム補間でも滑らかにします。
+- サンプルを 4種追加しました。
 
 ### 2025/01/11
 
