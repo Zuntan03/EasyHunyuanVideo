@@ -66,11 +66,11 @@ if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 @REM if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
 @REM https://github.com/ltdrdata/ComfyUI-Impact-Pack
-call :GITHUB_TAG_REQUIREMENTS ltdrdata ComfyUI-Impact-Pack Main 8.1.5
+call :GITHUB_TAG_REQUIREMENTS ltdrdata ComfyUI-Impact-Pack Main 8.3.1
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/ltdrdata/ComfyUI-Impact-Subpack
-call :GITHUB_TAG_REQUIREMENTS ltdrdata ComfyUI-Impact-Subpack main 1.2.5
+call :GITHUB_TAG_REQUIREMENTS ltdrdata ComfyUI-Impact-Subpack main 1.2.7
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/kijai/ComfyUI-KJNodes
@@ -78,7 +78,7 @@ call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-KJNodes main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/ltdrdata/ComfyUI-Manager
-call :GITHUB_TAG_REQUIREMENTS ltdrdata ComfyUI-Manager main 2.55.5
+call :GITHUB_TAG_REQUIREMENTS ltdrdata ComfyUI-Manager main 3.8.1
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/kijai/ComfyUI-MMAudio

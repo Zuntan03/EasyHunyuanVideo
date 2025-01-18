@@ -103,6 +103,14 @@
 
 ## 最近の更新履歴
 
+### 2025/01/19
+
+- [NVIDIA Cosmos](https://www.nvidia.com/en-us/ai/cosmos/) 対応を追加しました。
+	- `Download/Cosmos.bat` で必要なファイルをダウンロードしてから、ワークフローの `Easy/Cosmos_ImageToVideo` や `Easy/Cosmos_TextToVideo` で生成できます。
+		- Geforce RTX 3060 で 1280x704 の 121フレーム生成に 45分程度掛かります。
+		- リファイン・アップスケール・フレーム補間などは Hunyuan 用のワークフローを流用できます。
+	- [Flux example の ImageToVideo 例](https://yyy.wpx.jp/EasyHunyuanVideo/202501/Cosmos.mp4)
+
 ### 2025/01/13
 
 - [NoobAI Epsilon Prediction v1.1](https://huggingface.co/Laxhar/noobai-XL-1.1) と [ControlNet Tile](https://huggingface.co/Eugeoter/noob-sdxl-controlnet-tile) で、動画を詳細にする `Easy/50_Refine_NoobE` と `Easy/60_Detail_NoobE` のワークフローを追加しました。
