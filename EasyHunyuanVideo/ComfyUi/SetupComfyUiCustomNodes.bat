@@ -66,11 +66,11 @@ if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 @REM if %ERRORLEVEL% neq 0 ( pause & popd & exit /b 1 )
 
 @REM https://github.com/ltdrdata/ComfyUI-Impact-Pack
-call :GITHUB_TAG_REQUIREMENTS ltdrdata ComfyUI-Impact-Pack Main 8.3.1
+call :GITHUB_TAG_REQUIREMENTS ltdrdata ComfyUI-Impact-Pack Main 8.7
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/ltdrdata/ComfyUI-Impact-Subpack
-call :GITHUB_TAG_REQUIREMENTS ltdrdata ComfyUI-Impact-Subpack main 1.2.7
+call :GITHUB_TAG_REQUIREMENTS ltdrdata ComfyUI-Impact-Subpack main 1.2.9
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/kijai/ComfyUI-KJNodes
@@ -78,7 +78,7 @@ call :GITHUB_HASH_REQUIREMENTS kijai ComfyUI-KJNodes main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/ltdrdata/ComfyUI-Manager
-call :GITHUB_TAG_REQUIREMENTS ltdrdata ComfyUI-Manager main 3.8.1
+call :GITHUB_TAG_REQUIREMENTS ltdrdata ComfyUI-Manager main 3.11.2
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 @REM https://github.com/kijai/ComfyUI-MMAudio
@@ -136,9 +136,10 @@ exit /b 0
 :GITHUB_HASH_REQUIREMENTS
 set "GITHUB_AUTHOR=%1"
 set "GITHUB_REPO=%2"
-set "GITHUB_HASH=%3"
+set "GITHUB_BRANCH=%3"
+set "GITHUB_HASH=%4"
 
-call %GITHUB_CLONE_OR_PULL_HASH% %GITHUB_AUTHOR% %GITHUB_REPO% %GITHUB_HASH%
+call %GITHUB_CLONE_OR_PULL_HASH% %GITHUB_AUTHOR% %GITHUB_REPO% %GITHUB_BRANCH% %GITHUB_HASH%
 if %ERRORLEVEL% neq 0 ( exit /b 1 )
 
 if exist %GITHUB_REPO%\requirements.txt (
@@ -154,9 +155,10 @@ exit /b 0
 :GITHUB_TAG_REQUIREMENTS
 set "GITHUB_AUTHOR=%1"
 set "GITHUB_REPO=%2"
-set "GITHUB_TAG=%3"
+set "GITHUB_BRANCH=%3"
+set "GITHUB_TAG=%4"
 
-call %GITHUB_CLONE_OR_PULL_TAG% %GITHUB_AUTHOR% %GITHUB_REPO% %GITHUB_TAG%
+call %GITHUB_CLONE_OR_PULL_TAG% %GITHUB_AUTHOR% %GITHUB_REPO% %GITHUB_BRANCH% %GITHUB_TAG%
 if %ERRORLEVEL% neq 0 ( exit /b 1 )
 
 if exist %GITHUB_REPO%\requirements.txt (

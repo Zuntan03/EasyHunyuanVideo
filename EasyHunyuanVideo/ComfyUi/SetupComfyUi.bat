@@ -7,7 +7,7 @@ set PYTHON_ACTIVATE=%EASY_TOOLS%\Python\Python_Activate.bat
 pushd %~dp0..\..
 
 @REM https://github.com/comfyanonymous/ComfyUI
-call %GITHUB_CLONE_OR_PULL_TAG% comfyanonymous ComfyUI master v0.3.12
+call %GITHUB_CLONE_OR_PULL_TAG% comfyanonymous ComfyUI master v0.3.13
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
 
 popd rem %~dp0

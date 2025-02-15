@@ -91,7 +91,7 @@ if %ERRORLEVEL% equ 0 ( goto :EASY_GIT_FOUND )
 cd > NUL
 
 set PORTABLE_GIT_BIN=%EASY_GIT_DIR%\env\PortableGit\bin
-set PORTABLE_GIT_VERSION=2.47.0
+set PORTABLE_GIT_VERSION=2.48.1
 
 if not exist %PORTABLE_GIT_BIN%\ (
 	setlocal enabledelayedexpansion
