@@ -103,6 +103,12 @@
 
 ## 最近の更新履歴
 
+### 2025/02/24
+
+- [Kijai の HunyuanVideoWrapper](https://github.com/kijai/ComfyUI-HunyuanVideoWrapper) で互換性のない変更があり、過去のワークフローでエラーが発生します。
+	- `KeyError: 'context_schedule'` のエラーが出る場合は、`HunyuanVideo Sampler` ノードの `context_options` に繋がっている線を `feta_args` に繋ぎ直して直してください。
+	- `10_HunyuanVideo_Kijai` は修正済みですが、`Sample/` 内は未修正です。
+
 ### 2025/01/19
 
 - [NVIDIA Cosmos](https://www.nvidia.com/en-us/ai/cosmos/) 対応を追加しました。
